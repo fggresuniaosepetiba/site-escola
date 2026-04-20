@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G.R.E.S. União de Sepetiba — Home</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+      NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo-escola.jpeg" alt="G.R.E.S. União de Sepetiba" class="navbar__logo-img" />
+    </a>
+
+    <ul class="navbar__links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="nossa-historia.html">Nossa História</a></li>
+      <li><a href="diretoria.html">Diretoria</a></li>
+      <li><a href="#">Carnaval 2027</a></li>
+      <!-- <li><a href="#">Carnavais</a></li> -->
+      <!-- <li><a href="#">Galeria</a></li> -->
+    </ul>
+
+    <button class="btn-contato">Contato</button>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════
+        HERO
+    ══════════════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero__bg">
+        <!-- Troque o src pela sua imagem: assets/hero-bg.jpg -->
+        <img
+          src="images/pavilhao-escola.jpeg"
+          alt="Pavilhão União de Sepetiba"
+        />
+        <div class="hero__overlay hero-gradient"></div>
+      </div>
+
+      <div class="hero__content">
+        <span class="hero__badge">Fundada em 02/02/2024</span>
+
+        <h1 class="hero__title">
+          Orgulho de ser<br />
+          <span>Sepetiba</span> 💙🤍
+        </h1>
+
+        <div class="hero__btns">
+          <button class="btn-primary">Seja Sócio</button>
+          <!-- <button class="btn-outline">Explorar</button> -->
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span class="label">Rolar</span>
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+        COMUNIDADE EM AÇÃO (Carousel)
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-comunidade">
+      <div class="section-comunidade__header">
+        <div>
+          <h2>Comunidade em Ação</h2>
+          <p>É a nossa gente que faz o espetáculo. Sepetiba em ação, dentro da quadra, na avenida e no coração de cada componente.</p>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" aria-label="Anterior">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button class="carousel-btn next" aria-label="Próximo">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel-track no-scrollbar">
+
+        <!-- Card 1 -->
+        <div class="carousel-card">
+          <!-- Troque: assets/comunidade-1.jpg -->
+          <img src="images/enredo-2027.jpeg" alt="Enredo 2027" />
+          <div class="carousel-card__overlay"></div>
+          <div class="carousel-card__info">
+            <span class="tag">Enredo 2027</span>
+            <h3>SABAJÉ</h3>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="carousel-card">
+          <img src="images/rainha-bateria.jpeg" alt="Rainha de Bateria" />
+          <div class="carousel-card__overlay"></div>
+          <div class="carousel-card__info">
+            <span class="tag">Rainha de Bateria</span>
+            <h3>Juliana Ribeiro</h3>
+          </div>
+        </div>
+<!-- Card 3 -->
+        <div class="carousel-card">
+          <img src="images/eloa-peixoto.jpg" alt="Rainha de Bateria Mirim" />
+          <div class="carousel-card__overlay"></div>
+          <div class="carousel-card__info">
+            <span class="tag">Rainha de Bateria Mirim</span>
+            <h3>Eloá Peixoto</h3>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="carousel-card">
+          <img src="images/madrinha-bateria.png" alt="Madrinha da Escola" />
+          <div class="carousel-card__overlay"></div>
+          <div class="carousel-card__info">
+            <span class="tag">Madrinha da Escola</span>
+            <h3>Thayane Martins</h3>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="carousel-card">
+          <img src="images/logo_ISNB.png" alt="Instituto Social Neném Brandão" />
+          <div class="carousel-card__overlay"></div>
+          <div class="carousel-card__info">
+            <span class="tag">Social</span>
+            <h3>Instituto Social <br> Neném Brandão</h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+        ABOUT — Uma história esculpida no Azul e Branco
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-about">
+      <div class="section-about__inner">
+
+        <div class="section-about__text">
+          <h2>
+            Uma História<br />
+            Esculpida<br />
+            no <span class="highlight">Azul e Branco</span>
+          </h2>
+          <p>
+            Nascida no coração de Sepetiba, a nossa escola começa a escrever sua história com verdade, trabalho e paixão pelo samba. Ainda nos primeiros passos, já carregamos a força de uma comunidade que acredita, constrói e sonha alto todos os dias.
+          </p>
+          <button class="btn-text-link">
+            <span>Nossa História</span>
+            <span class="line"></span>
+            <span class="material-symbols-outlined">arrow_right_alt</span>
+          </button>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-grid__col-offset">
+            <!-- Troque: assets/about-1.jpg -->
+            <img
+              src="images/batizado-1.jpeg"
+              alt="Fantasia de carnaval"
+            />
+            <div class="stat-label" style="text-align:right;">
+              <span class="number">02</span>
+              <span class="desc">anos de uma trajetória que está só começando</span>
+            </div>
+          </div>
+          <div>
+            <!-- Troque: assets/about-2.jpg -->
+            <img
+              src="images/batizado-2.jpeg"
+              alt="Momento histórico"
+            />
+            <div class="stat-label">
+              <span class="number">+2K</span>
+              <span class="desc">SEGUIDORES NO INSTAGRAM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+        HIGHLIGHTS — Bento Grid
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-highlights">
+      <div class="section-highlights__inner">
+        <div class="bento-grid">
+
+          <!-- Card principal: Carnaval 2027 -->
+          <div class="bento-main">
+            <!-- Troque: assets/carnaval2027.jpg -->
+            <img
+              src="images/enredo-2027.jpeg"
+              alt="Carnaval 2027"
+            />
+            <div class="bento-main__overlay"></div>
+            <div class="bento-main__content">
+              <span class="badge-destaque">Destaque</span>
+              <h3>Carnaval 2027</h3>
+              <p>SABAJÉ — O enredo de 2027 que traduz a fé, a cura e a transformação através da ancestralidade.
+Na chuva sagrada de pipoca, a renovação do espírito e a força de um povo que resiste e renasce.</p>
+              <a href="carnaval2027.html" class="bento-link">
+                Saiba Mais
+                <span class="material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Notícia -->
+          <div class="bento-news">
+            <div>
+              <div class="bento-news__top">
+                <span class="bento-news__tag">Notícias</span>
+                <!-- <span class="bento-news__date">12 OUT 2024</span> -->
+              </div>
+              <h4>INSCRIÇÕES ABERTAS PARA O CARNAVAL 2027</h4>
+              <p>Chegou a sua hora de fazer parte da nossa história.
+A União de Sepetiba abre inscrições para todos os segmentos do Carnaval 2027.
+Seja na harmonia, na bateria, nas alas ou na comunidade, cada passo começa aqui.
+Venha viver o carnaval de dentro, com garra, união e paixão.</p>
+            </div>
+            <span class="material-symbols-outlined arrow">arrow_forward</span>
+          </div>
+
+          <!-- Galeria -->
+          <div class="bento-card blue">
+            <span class="material-symbols-outlined icon">photo_library</span>
+            <div>
+              <h4>Galeria<br />Multimídia</h4>
+              <p>Fotos, vídeos e áudios históricos.</p>
+            </div>
+          </div>
+
+          <!-- Sócio-Torcedor -->
+          <div class="bento-card dark">
+            <span class="material-symbols-outlined icon">loyalty</span>
+            <div>
+              <h4>Sócio<br />Torcedor</h4>
+              <p>Ajude a construir nossa vitória.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+        APOIOS & PATROCINADORES
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-patrocinadores">
+      <h2 class="patrocinadores__titulo">Apoios e Patrocinadores</h2>
+      <div class="patrocinadores__viewport">
+        <div class="patrocinadores__group" id="patrGroup">
+
+          <!-- Para adicionar: copie um .patr-item -->
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/logo_ISNB.png" alt="Instituto Social Neném Brandão" />
+            </div>
+          </div>
+
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/Patrocinadores/trinarysolutions-logo.jpeg" alt="Trinary Solutions" />
+            </div>
+          </div>
+
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/Patrocinadores/j2capital-logo.png" alt="J2 Capital" />
+            </div>
+          </div>
+
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/Patrocinadores/baobacosmeticos-logo.jpeg" alt="Baobá Cosméticos" />
+            </div>
+          </div>
+
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/Patrocinadores/sog-logo.jpeg" alt="Sepetiba Operation Group" />
+            </div>
+          </div>
+          
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/uacs-logo.jpeg" alt="União Atletico Clube de Sepetiba" />
+            </div>
+          </div>
+
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/gresv-uniao.png" alt="G.R.E.S.V. União de Sepetiba" />
+            </div>
+          </div>
+
+          <div class="patr-item">
+            <div class="patr-logo">
+              <img src="images/Patrocinadores/logo-ampulheta.jpeg" alt="Instituto Social Ampulheta" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+        BATERIA — Seção cinemática
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-bateria">
+  <!-- IMAGEM DE FUNDO -->
+  <img
+    src="images/pavilhao-escola.jpeg"
+    alt="Bateria Pegada de Marujo"
+    class="blue-wash"
+  />
+
+  <div class="section-bateria__overlay"></div>
+
+  <!-- CONTEÚDO -->
+  <div class="section-bateria__content">
+    <div class="section-bateria__inner">
+      <span class="section-bateria__badge">O Coração da Escola</span>
+
+      <h2>Bateria<br />Pegada de<br />Marujo</h2>
+
+      <p>
+        Pegada de Marujo, do Mestre Evandro Pereira. <br />
+        Mais que ritmo, uma pulsação coletiva que traduz a força e a identidade da União de Sepetiba.
+      </p>
+
+      <!-- BOTÃO -->
+      <button class="btn-play" id="playButton">
+        Ouça Agora
+        <span class="material-symbols-outlined">play_circle</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ÁUDIO -->
+  <audio id="sambaAudio">
+    <source src="audio/samba-enredo.ogg" type="audio/mpeg" />
+    <!-- Seu navegador não suporta áudio. -->
+  </audio>
+</section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+      FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer__grid">
+
+      <div>
+        <div class="footer__logo">
+          <img src="images/logo-escola.jpeg" alt="G.R.E.S. União de Sepetiba" style="height:5rem;width:5rem;object-fit:cover;border-radius:50%;border:2px solid rgba(255,255,255,0.3);margin-bottom:1rem;" />
+        </div>
+        <p class="footer__desc">
+          Sediada em Sepetiba, Rio de Janeiro. Cultivando a tradição,
+          o samba e a união da nossa comunidade desde 1986.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="#">Home</a>
+        <a href="nossa-historia.html">Nossa História</a>
+        <a href="#">Diretoria</a>
+        <a href="#">Carnaval 2027</a>
+        <a href="#">Carnavais</a>
+        <a href="#">Galeria</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Institucional</h4>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Imprensa</a>
+        <a href="#" style="color:#fff;font-weight:700;text-decoration:underline;">Sócio-Torcedor</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Social</h4>
+        <!-- <div class="footer__social">
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <span class="material-symbols-outlined" style="font-size:1.1rem;">social_leaderboard</span>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <span class="material-symbols-outlined" style="font-size:1.1rem;">photo_camera</span>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <span class="material-symbols-outlined" style="font-size:1.1rem;">smart_display</span>
+          </a>
+        </div> -->
+        <p class="newsletter-label">Fique por dentro</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Seu email" />
+          <button type="button" aria-label="Enviar">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2024 G.R.E.S. União de Sepetiba — Orgulho de ser Sepetiba 💙🤍</p>
+      <div class="badges">
+        <span>Presidente: João Ribeiro</span>
+        <span>Vice-presidente: Flávio Climagia</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

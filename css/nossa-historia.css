@@ -1,0 +1,543 @@
+/* ============================================================
+   Nossa História — CSS exclusivo
+   ============================================================ */
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.hist-hero {
+  position: relative;
+  /* altura mínima suficiente para todo o conteúdo + navbar (80px) */
+  min-height: 520px;
+  /* usa padding para empurrar o conteúdo de cima (navbar) e de baixo */
+  padding: 120px 3rem 5rem;          /* 120px = navbar 80px + folga 40px */
+  display: flex;
+  align-items: flex-end;
+  /* SEM overflow:hidden — era o que cortava o título */
+}
+
+.hist-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;                  /* o overflow fica só no bg, não no hero */
+}
+
+.hist-hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.38;
+  filter: grayscale(55%);
+}
+
+.hist-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(21,21,195,0.3) 0%,
+    rgba(10,10,128,0.97) 100%);
+}
+
+.hist-hero__content {
+  position: relative;
+  z-index: 10;
+  max-width: 60rem;
+  width: 100%;
+}
+
+.hist-hero__eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.hist-hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  /* tamanho fixo em rem — não escala com viewport, evita corte */
+  font-size: 5.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.hist-hero__sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  max-width: 34rem;
+  line-height: 1.7;
+}
+
+/* ── Corpo editorial ──────────────────────────────────────── */
+.hist-body {
+  background: var(--blue-darker);
+  padding: 5rem 3rem 6rem;
+}
+
+.hist-body__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* coluna principal de texto */
+.hist-body__main {}
+
+/* foto de abertura — discreta, flutua à direita no texto */
+.hist-body__opening-img {
+  float: right;
+  width: 300px;
+  margin: 0 0 2rem 2.5rem;
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hist-body__opening-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(40%);
+  transition: filter 0.5s;
+}
+.hist-body__opening-img img:hover { filter: grayscale(0%); }
+
+.hist-body__opening-img figcaption {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  padding: 0.5rem 0.25rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* seções de texto */
+.hist-section {
+  margin-bottom: 3.5rem;
+}
+
+.hist-section__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.hist-section p {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.97rem;
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+}
+
+.hist-section p:last-child { margin-bottom: 0; }
+
+/* imagem inline dentro do texto — esquerda ou direita */
+.hist-inline-img {
+  margin: 0.5rem 2rem 1.5rem 0;
+  float: left;
+  width: 260px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.hist-inline-img.right {
+  float: right;
+  margin: 0.5rem 0 1.5rem 2rem;
+}
+
+.hist-inline-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(40%);
+  transition: filter 0.5s;
+}
+.hist-inline-img img:hover { filter: grayscale(0%); }
+
+.hist-inline-img figcaption {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.38);
+  padding: 0.4rem 0.25rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* clearfix para os floats */
+.hist-section::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+.hist-sidebar {
+  position: sticky;
+  top: 7rem;
+}
+
+.hist-sidebar__box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hist-sidebar__box h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.45);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.hist-sidebar__img {
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.hist-sidebar__img img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(30%);
+  transition: filter 0.5s;
+}
+.hist-sidebar__img img:hover { filter: grayscale(0%); }
+
+.hist-sidebar__img figcaption {
+  font-size: 0.67rem;
+  color: rgba(255,255,255,0.38);
+  padding: 0.4rem 0.1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.hist-sidebar__fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.82rem;
+}
+
+.hist-sidebar__fact:last-child { border-bottom: none; }
+
+.hist-sidebar__fact .key {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+}
+
+.hist-sidebar__fact .val {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-align: right;
+  max-width: 55%;
+}
+
+/* ── Impacto na Comunidade ────────────────────────────────── */
+.hist-impacto {
+  background: var(--blue-dark);
+  padding: 6rem 3rem;
+}
+
+.hist-impacto__inner { max-width: 80rem; margin: 0 auto; }
+
+.hist-impacto__header { margin-bottom: 3rem; }
+
+.hist-impacto__header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.hist-impacto__header p {
+  color: rgba(255,255,255,0.55);
+  font-size: 1rem;
+}
+
+.bento-impacto {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 280px 280px;
+  gap: 1rem;
+}
+
+.bento-impacto__main {
+  grid-column: span 2;
+  grid-row: span 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.25rem;
+  cursor: default;
+  background: var(--blue-dim);
+}
+
+.bento-impacto__main img {
+  position: absolute;
+  inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  transition: transform 0.7s;
+}
+.bento-impacto__main:hover img { transform: scale(1.05); }
+
+.bento-impacto__main::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(21,21,195,0.95) 0%, transparent 55%);
+}
+
+.bento-impacto__main-content { position: relative; z-index: 2; }
+
+.bento-impacto__main h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.45rem;
+}
+
+.bento-impacto__main p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.6; }
+
+.bento-sm {
+  border-radius: 5px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bento-sm .icon { font-size: 2rem; color: rgba(255,255,255,0.7); margin-bottom: 0.4rem; }
+
+.bento-sm h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.bento-sm p { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+.bento-sm.c-blue  { background: var(--blue); }
+.bento-sm.c-mid   { background: var(--blue-dark); border: 1px solid rgba(255,255,255,0.1); }
+.bento-sm.c-dark  { background: var(--blue-dim); border: 1px solid rgba(255,255,255,0.08); }
+.bento-sm.c-stat  { background: var(--blue-darker); border-top: 4px solid rgba(255,255,255,0.5); justify-content: center; }
+
+.bento-sm.c-stat .stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.bento-sm.c-stat .stat-desc {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.42);
+}
+
+/* ── Citação Final ────────────────────────────────────────── */
+.hist-quote {
+  background: var(--blue-darker);
+  padding: 8rem 3rem;
+  text-align: center;
+}
+
+.hist-quote__inner { max-width: 48rem; margin: 0 auto; }
+
+.hist-quote__icon {
+  font-size: 3.5rem;
+  color: rgba(255,255,255,0.16);
+  display: block;
+  margin-bottom: 1.75rem;
+}
+
+.hist-quote blockquote {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+}
+
+.hist-quote cite {
+  font-style: normal;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.38);
+}
+
+/* ── Responsivo ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hist-body__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .hist-sidebar { position: static; }
+}
+
+@media (max-width: 768px) {
+  .hist-hero {
+    padding: 110px 1.5rem 4rem;
+    min-height: 460px;
+  }
+  .hist-hero__title { font-size: 3.75rem; }
+  .hist-body { padding: 3rem 1.5rem 4rem; }
+  .hist-body__opening-img,
+  .hist-inline-img,
+  .hist-inline-img.right { float: none; width: 100%; margin: 0 0 1.5rem 0; }
+  .hist-impacto { padding: 4rem 1.5rem; }
+  .bento-impacto { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .bento-impacto__main { grid-column: span 2; min-height: 260px; grid-row: span 1; }
+  .hist-quote { padding: 5rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .hist-hero__title { font-size: 3rem; }
+  .bento-impacto { grid-template-columns: 1fr; }
+  .bento-impacto__main { grid-column: span 1; }
+}
+
+
+/* ── Carnavais ────────────────────────────────────────────── */
+.hist-carnavais {
+  background: var(--blue-darker);
+  padding: 4rem 3rem 5rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.hist-carnavais__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+/* reutiliza .hist-section__title já definido acima */
+
+.carnavais-table-wrap {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* nome centralizado acima da tabela */
+.carnavais-table-header-nome {
+  background: #070084;
+  color: #fff;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.carnavais-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.carnavais-table thead tr {
+  background: #070084;
+}
+
+.carnavais-table thead th {
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  white-space: nowrap;
+}
+
+.carnavais-table thead th:last-child { border-right: none; }
+
+.carnavais-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.02);
+  transition: background 0.15s;
+}
+
+.carnavais-table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+.carnavais-table tbody tr:last-child { border-bottom: none; }
+
+.carnavais-table tbody tr:hover {
+  background: rgba(255,255,255,0.09);
+}
+
+.carnavais-table tbody td {
+  color: rgba(255,255,255,0.8);
+  padding: 0.85rem 1rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.carnavais-table tbody td:last-child { border-right: none; }
+
+/* ano em destaque */
+.carnavais-table tbody td:first-child {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* responsivo: scroll horizontal em telas pequenas */
+@media (max-width: 768px) {
+  .hist-carnavais { padding: 3rem 1.5rem 4rem; }
+  .carnavais-table-wrap { overflow-x: auto; }
+  .carnavais-table { min-width: 600px; }
+}

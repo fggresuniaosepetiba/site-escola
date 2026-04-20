@@ -1,0 +1,373 @@
+/* ============================================================
+  Diretoria — CSS exclusivo
+   ============================================================ */
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.dir-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.dir-hero__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.dir-hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  filter: grayscale(60%);
+}
+
+.dir-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(21,21,195,0.75) 0%,
+    rgba(10,10,128,0.98) 100%);
+}
+
+.dir-hero__content {
+  position: relative;
+  z-index: 10;
+  padding-top: 5rem; /* compensa navbar */
+}
+
+.dir-hero__eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.55);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.dir-hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  margin-bottom: 1.25rem;
+}
+
+.dir-hero__line {
+  width: 5rem;
+  height: 3px;
+  background: rgba(255,255,255,0.4);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ── Layout geral ─────────────────────────────────────────── */
+.dir-page {
+  background: var(--blue-darker);
+  padding: 5rem 3rem 6rem;
+}
+
+.dir-page__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* ── Cabeçalho de seção interno ───────────────────────────── */
+.dir-section-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.5);
+  border-left: 4px solid var(--blue);
+  padding-left: 0.75rem;
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+/* ── Bloco Presidente + Vice ──────────────────────────────── */
+.dir-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+/* card grande (presidente/vice) */
+.dir-card--hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  aspect-ratio: 4/5;
+  background: var(--blue-dim);
+  cursor: default;
+}
+
+.dir-card--hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+  transition: filter 0.55s ease, transform 0.55s ease;
+}
+
+.dir-card--hero:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+.dir-card--hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(10,10,128,0.95) 0%,
+    rgba(10,10,128,0.3) 50%,
+    transparent 100%);
+  z-index: 1;
+}
+
+.dir-card--hero__info {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 2rem 1.75rem;
+  z-index: 2;
+}
+
+.dir-card--hero__role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.55);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.dir-card--hero__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.1;
+}
+
+/* ── Grid dos demais diretores ────────────────────────────── */
+.dir-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+/* card padrão */
+.dir-card {
+  background: var(--blue-dark);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.dir-card__img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--blue-dim);
+}
+
+.dir-card__img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.dir-card:hover .dir-card__img-wrap img {
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+/* placeholder quando não há foto */
+.dir-card__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--blue-dim) 0%, var(--blue-dark) 100%);
+}
+
+.dir-card__placeholder span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.12);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+.dir-card__info {
+  padding: 0.85rem 0.9rem 1rem;
+}
+
+.dir-card__role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.42);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.dir-card__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+/* ── Coração da Escola ────────────────────────────────────── */
+.dir-coracao {
+  background: var(--blue-dark);
+  border-top: 2px solid var(--blue);
+  border-radius: 4px;
+  padding: 3.5rem 3rem;
+  margin-bottom: 0;
+}
+
+.dir-coracao__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.dir-coracao__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* card circular do coração */
+.dir-coracao-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: default;
+}
+
+.dir-coracao-card__circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.18);
+  background: var(--blue-dim);
+  margin-bottom: 1.1rem;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dir-coracao-card__circle img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.dir-coracao-card:hover .dir-coracao-card__circle img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+.dir-coracao-card__circle--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dir-coracao-card__circle--placeholder span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.12);
+  text-transform: uppercase;
+}
+
+.dir-coracao-card__role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.45);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.dir-coracao-card__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* ── Responsivo ───────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .dir-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .dir-coracao__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .dir-hero { height: 320px; }
+  .dir-page { padding: 3rem 1.5rem 4rem; }
+  .dir-top { grid-template-columns: 1fr; }
+  .dir-grid { grid-template-columns: repeat(2, 1fr); }
+  .dir-coracao { padding: 2.5rem 1.5rem; }
+  .dir-coracao-card__circle { width: 120px; height: 120px; }
+}
+
+@media (max-width: 480px) {
+  .dir-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .dir-coracao__grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
