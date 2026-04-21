@@ -95,75 +95,70 @@
   display: block;
 }
 
-/* ── Bloco Presidente + Vice ──────────────────────────────── */
+/* ── Bloco Presidência (3 cards iguais aos demais) ────────── */
 .dir-top {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   margin-bottom: 5rem;
 }
 
-/* card grande (presidente/vice) */
+/* reutiliza exatamente o mesmo estilo do .dir-card */
 .dir-card--hero {
-  position: relative;
-  overflow: hidden;
+  background: var(--blue-dark);
   border-radius: 3px;
-  aspect-ratio: 4/5;
-  background: var(--blue-dim);
+  overflow: hidden;
   cursor: default;
 }
 
-.dir-card--hero img {
+.dir-card--hero .dir-card__img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--blue-dim);
+}
+
+.dir-card--hero .dir-card__img-wrap img {
   position: absolute;
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: top center;
   filter: grayscale(100%);
-  transition: filter 0.55s ease, transform 0.55s ease;
+  transition: filter 0.5s ease, transform 0.5s ease;
 }
 
-.dir-card--hero:hover img {
+.dir-card--hero:hover .dir-card__img-wrap img {
   filter: grayscale(0%);
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
-.dir-card--hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top,
-    rgba(10,10,128,0.95) 0%,
-    rgba(10,10,128,0.3) 50%,
-    transparent 100%);
-  z-index: 1;
-}
+/* info igual ao dir-card */
+.dir-card--hero__overlay { display: none; }
 
 .dir-card--hero__info {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 2rem 1.75rem;
-  z-index: 2;
+  padding: 0.85rem 0.9rem 1rem;
 }
 
 .dir-card--hero__role {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.42);
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .dir-card--hero__name {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.75rem;
-  font-weight: 900;
+  font-size: 0.95rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
   color: #fff;
-  line-height: 1.1;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 /* ── Grid dos demais diretores ────────────────────────────── */
@@ -361,7 +356,7 @@
 @media (max-width: 768px) {
   .dir-hero { height: 320px; }
   .dir-page { padding: 3rem 1.5rem 4rem; }
-  .dir-top { grid-template-columns: 1fr; }
+  .dir-top { grid-template-columns: 1fr 1fr; }
   .dir-grid { grid-template-columns: repeat(2, 1fr); }
   .dir-coracao { padding: 2.5rem 1.5rem; }
   .dir-coracao-card__circle { width: 120px; height: 120px; }

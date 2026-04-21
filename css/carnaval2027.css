@@ -1,0 +1,536 @@
+/* ============================================================
+  Carnaval 2027 — CSS exclusivo
+   ============================================================ */
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.cv-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 120px 3rem 5rem;
+  overflow: hidden;
+}
+
+.cv-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cv-hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.cv-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(21,21,195,0.55) 0%,
+    rgba(10,10,128,1) 100%);
+}
+
+.cv-hero__content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: flex-end;
+}
+
+.cv-hero__badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 3px;
+  margin-bottom: 1.25rem;
+  display: block;
+  width: fit-content;
+}
+
+.cv-hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #fff;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  margin-bottom: 1.75rem;
+}
+
+.cv-hero__title .accent { color: #a0a0ff; }
+
+.cv-hero__sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 38rem;
+  line-height: 1.7;
+}
+
+/* meta lateral (data, local, divisão) */
+.cv-hero__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 0.25rem;
+  flex-shrink: 0;
+}
+
+.cv-hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cv-hero__meta-item .material-symbols-outlined {
+  font-size: 1.1rem;
+  color: #a0a0ff;
+  flex-shrink: 0;
+}
+
+.cv-hero__meta-item span.label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.65);
+}
+
+/* ── Sinopse ──────────────────────────────────────────────── */
+.cv-sinopse {
+  background: var(--blue-darker);
+  padding: 7rem 3rem;
+}
+
+.cv-sinopse__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.cv-sinopse__img-wrap {
+  position: relative;
+}
+
+.cv-sinopse__img-wrap img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+  display: block;
+}
+
+/* badge "27" sobreposto */
+.cv-sinopse__year-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background: var(--blue);
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+}
+
+.cv-sinopse__year-badge .year {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  display: block;
+}
+
+.cv-sinopse__year-badge .year-label {
+  font-size: 0.6rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.2rem;
+  display: block;
+}
+
+/* texto da sinopse */
+.cv-sinopse__text {}
+
+.cv-sinopse__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cv-sinopse__title::before {
+  content: '';
+  display: inline-block;
+  width: 2.5rem;
+  height: 2px;
+  background: #a0a0ff;
+  flex-shrink: 0;
+}
+
+.cv-sinopse__text p {
+  color: rgba(255,255,255,0.68);
+  font-size: 1rem;
+  line-height: 1.82;
+  margin-bottom: 1.1rem;
+}
+
+.cv-sinopse__text p:last-child { margin-bottom: 0; }
+
+.cv-sinopse__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #fff;
+  transition: gap 0.2s;
+}
+
+.cv-sinopse__download:hover { gap: 1.2rem; }
+
+.cv-sinopse__download .icon-wrap {
+  width: 2.75rem; height: 2.75rem;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.cv-sinopse__download:hover .icon-wrap { background: var(--blue-light); }
+
+.cv-sinopse__download .material-symbols-outlined { font-size: 1.1rem; }
+
+.cv-sinopse__download span.text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ── Time de Carnaval ─────────────────────────────────────── */
+.cv-time {
+  background: var(--blue-dark);
+  padding: 6rem 3rem;
+}
+
+.cv-time__inner { max-width: 80rem; margin: 0 auto; }
+
+.cv-time__header { margin-bottom: 3.5rem; }
+
+.cv-time__header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.cv-time__header p { color: rgba(255,255,255,0.55); font-size: 0.95rem; }
+
+.cv-time__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* card do time */
+.cv-time-card {
+  background: var(--blue-darker);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: default;
+  transition: background 0.3s;
+}
+
+.cv-time-card:hover { background: var(--blue); }
+
+.cv-time-card__img {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--blue-dim);
+}
+
+.cv-time-card__img img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.cv-time-card:hover .cv-time-card__img img {
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+.cv-time-card__info { padding: 0.85rem 0.9rem 1rem; }
+
+.cv-time-card__role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.42);
+  display: block;
+  margin-bottom: 0.3rem;
+  transition: color 0.3s;
+}
+
+.cv-time-card:hover .cv-time-card__role { color: rgba(255,255,255,0.7); }
+
+.cv-time-card__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.25;
+}
+
+/* ── Samba Enredo + CTA ───────────────────────────────────── */
+.cv-cta {
+  background: var(--blue-darker);
+  padding: 6rem 3rem;
+}
+
+.cv-cta__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+/* card samba */
+.cv-cta__samba {
+  background: var(--blue);
+  border-radius: 6px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cv-cta__samba::before {
+  content: '';
+  position: absolute;
+  top: -2rem; right: -2rem;
+  width: 14rem; height: 14rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.cv-cta__samba .material-symbols-outlined.big-icon {
+  position: absolute;
+  top: 1.5rem; right: 2rem;
+  font-size: 7rem;
+  color: rgba(255,255,255,0.07);
+}
+
+.cv-cta__samba h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-cta__samba p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  max-width: 32rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-cta__samba-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-play-samba {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  color: var(--blue);
+  border: none;
+  padding: 0.85rem 1.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-play-samba:hover { opacity: 0.9; }
+
+.btn-letra {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 0.85rem 1.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-letra:hover { background: rgba(255,255,255,0.1); }
+
+/* card stat */
+.cv-cta__stat {
+  background: var(--blue-dark);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.cv-cta__stat .number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.cv-cta__stat .desc {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #a0a0ff;
+}
+
+.btn-comunidade {
+  width: 100%;
+  background: #fff;
+  color: var(--blue);
+  border: none;
+  padding: 0.9rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.btn-comunidade:hover { opacity: 0.9; }
+
+/* player de áudio embutido */
+.cv-audio-player {
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-audio-player audio {
+  width: 100%;
+  height: 36px;
+  filter: invert(1) brightness(0.9);
+  border-radius: 3px;
+}
+
+/* ── Responsivo ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .cv-time__grid { grid-template-columns: repeat(3, 1fr); }
+  .cv-cta__inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .cv-hero { padding: 110px 1.5rem 4rem; }
+  .cv-hero__content { grid-template-columns: 1fr; }
+  .cv-hero__meta { border-left: none; border-top: 1px solid rgba(255,255,255,0.2); padding-left: 0; padding-top: 1.5rem; margin-top: 1rem; flex-direction: row; flex-wrap: wrap; }
+  .cv-sinopse { padding: 4rem 1.5rem; }
+  .cv-sinopse__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .cv-sinopse__year-badge { display: none; }
+  .cv-time { padding: 4rem 1.5rem; }
+  .cv-time__grid { grid-template-columns: repeat(2, 1fr); }
+  .cv-cta { padding: 4rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .cv-time__grid { grid-template-columns: repeat(2, 1fr); }
+}
