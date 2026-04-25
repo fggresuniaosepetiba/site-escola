@@ -540,3 +540,14 @@
   .carnavais-table-wrap { overflow-x: auto; }
   .carnavais-table { min-width: 600px; }
 }
+
+.credit {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 6px;
+  transition: 0.3s;
+}
+
+.credit:hover {
+  opacity: 1;
+}
