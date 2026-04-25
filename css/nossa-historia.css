@@ -186,7 +186,6 @@
 
 /* ── Sidebar ──────────────────────────────────────────────── */
 .hist-sidebar {
-  position: sticky;
   top: 7rem;
 }
 
