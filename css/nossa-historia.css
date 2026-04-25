@@ -237,7 +237,7 @@
 .hist-sidebar__fact {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   padding: 0.45rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.06);
   font-size: 0.82rem;
