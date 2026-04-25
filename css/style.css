@@ -196,10 +196,9 @@ body {
 
 .hero__title img {
   width: 510px;
-  /* height: 200px; */
 }
 
-/* .hero__title span {
+.hero__title span {
   background: linear-gradient(90deg, #ffffff, #a0a0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -208,7 +207,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-} */
+}
 
 .hero__btns {
   display: flex;
