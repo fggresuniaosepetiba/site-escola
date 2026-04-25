@@ -1,0 +1,687 @@
+/* ============================================================
+   Sócio — CSS exclusivo
+   ============================================================ */
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.socio-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 120px 3rem 4.5rem;
+  overflow: hidden;
+}
+
+.socio-hero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.socio-hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  filter: grayscale(50%);
+}
+
+.socio-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg,
+    rgba(21,21,195,0.7) 0%,
+    rgba(10,10,128,0.98) 100%);
+}
+
+.socio-hero__content {
+  position: relative;
+  z-index: 10;
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.socio-hero__eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.socio-hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.socio-hero__sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.62);
+  max-width: 38rem;
+  line-height: 1.7;
+}
+
+/* ── Seção de planos ──────────────────────────────────────── */
+.socio-planos {
+  background: var(--blue-darker);
+  padding: 6rem 2rem 7rem;
+}
+
+.socio-planos__inner {
+  max-width: 82rem;
+  margin: 0 auto;
+}
+
+.socio-planos__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.socio-planos__header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.socio-planos__header p {
+  color: rgba(255,255,255,0.55);
+  font-size: 1rem;
+}
+
+/* ── Grid de cards ────────────────────────────────────────── */
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ── Card de plano ────────────────────────────────────────── */
+.plano-card {
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.plano-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.45);
+}
+
+/* Sócio-Torcedor */
+.plano-card--torcedor {
+  background: linear-gradient(160deg, #0f0f8a 0%, #0a0a70 100%);
+}
+
+/* Contribuinte — destaque central */
+.plano-card--contribuinte {
+  background: linear-gradient(160deg, #1515C3 0%, #0e0ea0 100%);
+  border-color: rgba(255,255,255,0.22);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 64px rgba(21,21,195,0.5);
+}
+
+.plano-card--contribuinte:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 36px 80px rgba(21,21,195,0.6);
+}
+
+/* Patrimonial */
+.plano-card--patrimonial {
+  background: linear-gradient(160deg, #0d0d90 0%, #080870 100%);
+}
+
+/* badge "mais popular" no contribuinte */
+.plano-card__popular {
+  background: #fff;
+  color: var(--blue);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 0.45rem 1rem;
+}
+
+/* cabeçalho do card */
+.plano-card__head {
+  padding: 2.25rem 2rem 1.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.plano-card__tipo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.plano-card__nome {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  line-height: 1;
+}
+
+.plano-card__preco {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.plano-card__preco .cifrao {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.2rem;
+}
+
+.plano-card__preco .valor {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.plano-card__preco .periodo {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+
+/* benefícios em destaque (sempre visíveis) */
+.plano-card__destaques {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.plano-destaque {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.45;
+}
+
+.plano-destaque .check {
+  color: #6ee7b7;
+  font-size: 1rem;
+  margin-top: 0.05rem;
+  flex-shrink: 0;
+  font-variation-settings: 'FILL' 1;
+}
+
+/* accordion — ver mais */
+.plano-card__accordion {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.plano-accordion__toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  color: rgba(255,255,255,0.55);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: color 0.2s, background 0.2s;
+}
+
+.plano-accordion__toggle:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+
+.plano-accordion__toggle .arrow {
+  transition: transform 0.35s ease;
+  font-size: 1.1rem;
+}
+
+.plano-accordion__toggle.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* lista completa de benefícios (oculta por padrão) */
+.plano-accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+
+.plano-accordion__body.open {
+  max-height: 1200px;
+}
+
+.plano-beneficios-lista {
+  padding: 0.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.beneficio-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.45;
+}
+
+.beneficio-row:last-child { border-bottom: none; }
+
+.beneficio-row .ico {
+  flex-shrink: 0;
+  font-size: 1rem;
+  margin-top: 0.05rem;
+  font-variation-settings: 'FILL' 1;
+}
+
+.beneficio-row .ico.yes { color: #6ee7b7; }
+.beneficio-row .ico.no  { color: #f87171; }
+.beneficio-row .ico.par { color: #fbbf24; }
+
+.beneficio-row .obs {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.38);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* footer do card — botão */
+.plano-card__footer {
+  padding: 1.5rem 2rem 2rem;
+  margin-top: auto;
+}
+
+.btn-plano {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.btn-plano:hover { transform: scale(0.98); opacity: 0.92; }
+
+.plano-card--torcedor    .btn-plano { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+.plano-card--torcedor    .btn-plano:hover { background: rgba(255,255,255,0.2); }
+.plano-card--contribuinte .btn-plano { background: #fff; color: var(--blue); }
+.plano-card--patrimonial  .btn-plano { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+.plano-card--patrimonial  .btn-plano:hover { background: rgba(255,255,255,0.2); }
+
+/* ── Formulário ───────────────────────────────────────────── */
+.socio-form-section {
+  background: var(--blue-dark);
+  padding: 6rem 2rem 7rem;
+  display: none; /* mostrado via JS */
+}
+
+.socio-form-section.visible { display: block; }
+
+.socio-form__inner {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.socio-form__header {
+  margin-bottom: 2.5rem;
+}
+
+.socio-form__plano-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--blue);
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  margin-bottom: 1.25rem;
+}
+
+.socio-form__header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.socio-form__header p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.92rem;
+}
+
+/* fieldset */
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+}
+
+.form-fieldset legend {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: block;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+}
+
+.form-grid .span-full { grid-column: 1 / -1; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.55);
+}
+
+.form-group label .req {
+  color: #f87171;
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group select {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.92rem;
+  padding: 0.8rem 1rem;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+.form-group input::placeholder { color: rgba(255,255,255,0.25); }
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.1);
+}
+
+.form-group input.error { border-color: #f87171; }
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-group select option { background: #0a0a80; color: #fff; }
+
+/* botões do formulário */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-submit {
+  background: #fff;
+  color: var(--blue);
+  border: none;
+  padding: 1rem 3rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-submit:hover { opacity: 0.9; transform: scale(0.98); }
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.btn-voltar {
+  background: transparent;
+  color: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 1rem 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.btn-voltar:hover { color: #fff; border-color: rgba(255,255,255,0.4); }
+
+/* ── Confirmação ──────────────────────────────────────────── */
+.socio-confirmacao {
+  background: var(--blue-darker);
+  padding: 7rem 2rem;
+  text-align: center;
+  display: none;
+}
+
+.socio-confirmacao.visible { display: block; }
+
+.socio-confirmacao__inner {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.confirmacao-icon {
+  font-size: 4rem;
+  color: #6ee7b7;
+  margin-bottom: 1.5rem;
+  display: block;
+  font-variation-settings: 'FILL' 1;
+}
+
+.confirmacao__titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.confirmacao__sub {
+  color: rgba(255,255,255,0.6);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+/* caixa do número de sócio */
+.numero-socio-box {
+  background: var(--blue);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.numero-socio-box::before {
+  content: '';
+  position: absolute;
+  top: -3rem; right: -3rem;
+  width: 10rem; height: 10rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+.numero-socio-box .label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.55);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.numero-socio-box .numero {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: #fff;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.numero-socio-box .plano-info {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* aviso 10 dias */
+.confirmacao-aviso {
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.3);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.confirmacao-aviso .material-symbols-outlined {
+  color: #fbbf24;
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  margin-top: 0.1rem;
+  font-variation-settings: 'FILL' 1;
+}
+
+.confirmacao-aviso p {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+}
+
+.confirmacao-aviso strong { color: #fbbf24; }
+
+.btn-imprimir {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.9rem 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-imprimir:hover { background: rgba(255,255,255,0.18); }
+
+/* ── Responsivo ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .planos-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+  .plano-card--contribuinte { transform: none; }
+  .plano-card--contribuinte:hover { transform: translateY(-6px); }
+}
+
+@media (max-width: 640px) {
+  .socio-hero { padding: 110px 1.5rem 3.5rem; }
+  .socio-planos { padding: 4rem 1.25rem 5rem; }
+  .socio-form-section { padding: 4rem 1.25rem 5rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-grid .span-full { grid-column: 1; }
+  .socio-confirmacao { padding: 5rem 1.25rem; }
+}

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G.R.E.S. União de Sepetiba — Home</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/socio.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+      NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo-escola.jpeg" alt="G.R.E.S. União de Sepetiba" class="navbar__logo-img" />
+    </a>
+
+    <ul class="navbar__links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="nossa-historia.html">Nossa História</a></li>
+      <li><a href="diretoria.html">Diretoria</a></li>
+      <li><a href="carnaval2027.html">Carnaval 2027</a></li>
+      <li><a href="socio.html">Sócios</a></li>
+      <!-- <li><a href="#">Galeria</a></li> -->
+    </ul>
+
+    <button class="btn-contato">Contato</button>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════
+        HERO
+    ══════════════════════════════════════════════════════ -->
+    <section class="socio-hero">
+      <div class="socio-hero__bg">
+        <img src="images/apoteose.png" alt="União de Sepetiba" />
+        <div class="socio-hero__overlay"></div>
+      </div>
+      <div class="socio-hero__content">
+        <span class="socio-hero__eyebrow">G.R.E.S. União de Sepetiba</span>
+        <h1 class="socio-hero__title">Seja Sócio</h1>
+        <p class="socio-hero__sub">
+          Faça parte da família azul e branco. Escolha o plano ideal para você
+          e ajude a construir a história da União de Sepetiba.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         PLANOS
+    ══════════════════════════════════════════════════════ -->
+    <section class="socio-planos" id="secao-planos">
+      <div class="socio-planos__inner">
+
+        <div class="socio-planos__header">
+          <h2>Escolha seu plano</h2>
+          <p>Três formas de apoiar e fazer parte da nossa escola.</p>
+        </div>
+
+        <div class="planos-grid">
+
+          <!-- ══ SÓCIO-TORCEDOR ══ -->
+          <div class="plano-card plano-card--torcedor">
+
+            <div class="plano-card__head">
+              <span class="plano-card__tipo">Plano</span>
+              <p class="plano-card__nome">Sócio-Torcedor</p>
+              <div class="plano-card__preco">
+                <span class="cifrao">R$</span>
+                <span class="valor">50</span>
+                <span class="periodo">/mês</span>
+              </div>
+            </div>
+
+            <!-- destaques sempre visíveis -->
+            <div class="plano-card__destaques">
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                20% de desconto em camisas
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                15% de desconto em ingressos
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                10% de desconto em fantasias
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Carteirinha digital
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Prioridade em alas comerciais
+              </div>
+            </div>
+
+            <!-- accordion -->
+            <div class="plano-card__accordion">
+              <button class="plano-accordion__toggle" type="button" aria-expanded="false">
+                <span class="material-symbols-outlined arrow">expand_more</span>
+                <span class="toggle-label">Ver todos os benefícios</span>
+              </button>
+              <div class="plano-accordion__body">
+                <div class="plano-beneficios-lista">
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>20% de desconto em camisas</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>15% de desconto em ingressos</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>10% de desconto em fantasias</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Desconto em eventos na quadra</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Carteirinha digital</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Prioridade em alas comerciais</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Carteirinha física</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Acesso gratuito à quadra nos ensaios
+                      <span class="obs">Acesso mediante pagamento</span>
+                    </span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Prioridade em alas da comunidade</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Newsletter exclusiva</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Acesso antecipado a lançamentos</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Eventos fechados da diretoria</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Estacionamento na quadra</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Assumir cargos</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Candidatura à eleição</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Participação em conselho</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="plano-card__footer">
+              <button class="btn-plano" data-plano="torcedor" type="button">
+                Quero este plano
+              </button>
+            </div>
+          </div>
+
+          <!-- ══ CONTRIBUINTE ══ -->
+          <div class="plano-card plano-card--contribuinte">
+            <div class="plano-card__popular">⭐ Mais popular</div>
+
+            <div class="plano-card__head">
+              <span class="plano-card__tipo">Plano</span>
+              <p class="plano-card__nome">Contribuinte</p>
+              <div class="plano-card__preco">
+                <span class="cifrao">R$</span>
+                <span class="valor">150</span>
+                <span class="periodo">/mês</span>
+              </div>
+            </div>
+
+            <div class="plano-card__destaques">
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                50% de desconto em camisas
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Prioridade na compra de ingressos
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                25% de desconto em fantasias
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Acesso gratuito à quadra nos ensaios
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Newsletter + acesso antecipado
+              </div>
+            </div>
+
+            <div class="plano-card__accordion">
+              <button class="plano-accordion__toggle" type="button" aria-expanded="false">
+                <span class="material-symbols-outlined arrow">expand_more</span>
+                <span class="toggle-label">Ver todos os benefícios</span>
+              </button>
+              <div class="plano-accordion__body">
+                <div class="plano-beneficios-lista">
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>50% de desconto em camisas</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Prioridade na compra de ingressos</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>25% de desconto em fantasias</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Acesso gratuito a alguns eventos na quadra</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Acesso gratuito à quadra nos ensaios</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Carteirinha digital</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico par">check_circle</span>
+                    <span>Carteirinha física
+                      <span class="obs">* Custo por conta do sócio</span>
+                    </span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Prioridade em alas comerciais</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Prioridade em alas da comunidade</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Newsletter exclusiva</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Acesso antecipado a lançamentos</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico par">check_circle</span>
+                    <span>Eventos fechados da diretoria
+                      <span class="obs">***** Mediante taxa de contribuição se houver arrecadação</span>
+                    </span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Estacionamento na quadra</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico par">check_circle</span>
+                    <span>Assumir cargos
+                      <span class="obs">** Exceto Presidente, Vice, Diretor Geral e Executivo</span>
+                    </span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico no">cancel</span>
+                    <span>Candidatura à eleição</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico par">cancel</span>
+                    <span>Participação em conselho
+                      <span class="obs">*** Somente mediante edital interno específico</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="plano-card__footer">
+              <button class="btn-plano" data-plano="contribuinte" type="button">
+                Quero este plano
+              </button>
+            </div>
+          </div>
+
+          <!-- ══ PATRIMONIAL ══ -->
+          <div class="plano-card plano-card--patrimonial">
+
+            <div class="plano-card__head">
+              <span class="plano-card__tipo">Plano</span>
+              <p class="plano-card__nome">Patrimonial</p>
+              <div class="plano-card__preco">
+                <span class="cifrao">R$</span>
+                <span class="valor">500</span>
+                <span class="periodo">/mês</span>
+              </div>
+            </div>
+
+            <div class="plano-card__destaques">
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Camisa gratuita a cada lançamento
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Ingressos gratuitos (quando possível)
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Fantasias gratuitas
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Voto em assembleias e eleições
+              </div>
+              <div class="plano-destaque">
+                <span class="material-symbols-outlined check">check_circle</span>
+                Pode se candidatar a presidente
+              </div>
+            </div>
+
+            <div class="plano-card__accordion">
+              <button class="plano-accordion__toggle" type="button" aria-expanded="false">
+                <span class="material-symbols-outlined arrow">expand_more</span>
+                <span class="toggle-label">Ver todos os benefícios</span>
+              </button>
+              <div class="plano-accordion__body">
+                <div class="plano-beneficios-lista">
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Camisa gratuita a cada lançamento</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Prioridade máxima + desconto exclusivo em ingressos
+                      <span class="obs">Podendo ser gratuito</span>
+                    </span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Fantasias gratuitas</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Acesso gratuito a todos os eventos na quadra</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Acesso gratuito à quadra nos ensaios</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Carteirinha digital + física</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Prioridade máxima em alas comerciais
+                      <span class="obs">**** Maior prioridade dentre todas as categorias</span>
+                    </span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Prioridade em alas da comunidade (primeiro)</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Newsletter exclusiva</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Acesso antecipado a lançamentos</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Convite para eventos fechados da diretoria</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Vaga reservada no estacionamento da quadra</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Pode assumir qualquer cargo, incluindo eletivos</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Candidatura à eleição de Presidente e Vice</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Voto em assembleias e eleições</span>
+                  </div>
+                  <div class="beneficio-row">
+                    <span class="material-symbols-outlined ico yes">check_circle</span>
+                    <span>Participação em conselho sem restrições</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="plano-card__footer">
+              <button class="btn-plano" data-plano="patrimonial" type="button">
+                Quero este plano
+              </button>
+            </div>
+          </div>
+
+        </div><!-- fim .planos-grid -->
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         FORMULÁRIO DE INSCRIÇÃO
+    ══════════════════════════════════════════════════════ -->
+    <section class="socio-form-section" id="secao-form">
+      <div class="socio-form__inner">
+
+        <div class="socio-form__header">
+          <span class="socio-form__plano-badge" id="plano-badge-nome">Plano selecionado</span>
+          <h2>Ficha de Inscrição</h2>
+          <p>Preencha todos os campos. Após o envio, você receberá seu número de sócio.</p>
+        </div>
+
+        <form id="form-socio" novalidate>
+
+          <!-- Dados Pessoais -->
+          <fieldset class="form-fieldset">
+            <legend>Dados Pessoais</legend>
+            <div class="form-grid">
+              <div class="form-group span-full">
+                <label for="nome">Nome completo <span class="req">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="nascimento">Data de nascimento <span class="req">*</span></label>
+                <input type="date" id="nascimento" name="nascimento" />
+              </div>
+              <div class="form-group">
+                <label for="cpf">CPF <span class="req">*</span></label>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" />
+              </div>
+              <div class="form-group">
+                <label for="rg">RG <span class="req">*</span></label>
+                <input type="text" id="rg" name="rg" placeholder="0000000" />
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone / WhatsApp <span class="req">*</span></label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(21) 99999-9999" inputmode="numeric" />
+              </div>
+              <div class="form-group span-full">
+                <label for="email">E-mail <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Endereço -->
+          <fieldset class="form-fieldset">
+            <legend>Endereço</legend>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cep">CEP <span class="req">*</span></label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric" />
+              </div>
+              <div class="form-group span-full">
+                <label for="rua">Rua / Avenida <span class="req">*</span></label>
+                <input type="text" id="rua" name="rua" placeholder="Preenchido automaticamente pelo CEP" />
+              </div>
+              <div class="form-group">
+                <label for="numero">Número <span class="req">*</span></label>
+                <input type="text" id="numero" name="numero" placeholder="Ex: 123" />
+              </div>
+              <div class="form-group">
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento" placeholder="Apto, bloco..." />
+              </div>
+              <div class="form-group">
+                <label for="bairro">Bairro <span class="req">*</span></label>
+                <input type="text" id="bairro" name="bairro" placeholder="Seu bairro" />
+              </div>
+              <div class="form-group">
+                <label for="cidade">Cidade <span class="req">*</span></label>
+                <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" />
+              </div>
+              <div class="form-group">
+                <label for="estado">Estado <span class="req">*</span></label>
+                <input type="text" id="estado" name="estado" placeholder="UF" maxlength="2" style="text-transform:uppercase;" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Preferências -->
+          <fieldset class="form-fieldset">
+            <legend>Preferências</legend>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="camisa">Tamanho de camisa <span class="req">*</span></label>
+                <select id="camisa" name="camisa">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="PP">PP</option>
+                  <option value="P">P</option>
+                  <option value="M">M</option>
+                  <option value="G">G</option>
+                  <option value="GG">GG</option>
+                  <option value="XG">XG</option>
+                  <option value="XXG">XXG</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="calcado">Tamanho de calçado <span class="req">*</span></label>
+                <select id="calcado" name="calcado">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="33">33</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                  <option value="46">46</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">Enviar inscrição</button>
+            <button type="button" class="btn-voltar" id="btn-voltar">← Voltar aos planos</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         CONFIRMAÇÃO + NÚMERO DE SÓCIO
+    ══════════════════════════════════════════════════════ -->
+    <section class="socio-confirmacao" id="secao-confirmacao">
+      <div class="socio-confirmacao__inner">
+
+        <span class="material-symbols-outlined confirmacao-icon">verified</span>
+
+        <h2 class="confirmacao__titulo">
+          Bem-vindo à família,<br />
+          <span id="confirmacao-nome">sócio</span>!
+        </h2>
+
+        <p class="confirmacao__sub">
+          Sua inscrição foi registrada com sucesso.
+          Guarde o seu número de sócio — ele é único e exclusivamente seu.
+        </p>
+
+        <div class="numero-socio-box">
+          <span class="label">Seu número de sócio</span>
+          <span class="numero" id="confirmacao-numero">UDS-XXXXXX</span>
+          <span class="plano-info" id="confirmacao-plano"></span>
+        </div>
+
+        <div class="confirmacao-aviso">
+          <span class="material-symbols-outlined">warning</span>
+          <p>
+            <strong>Atenção:</strong> você tem até <strong>10 dias úteis</strong> para validar
+            o pagamento da sua inscrição na secretaria da escola.
+            Caso não seja realizado dentro do prazo,
+            <strong>este número de sócio será inativado automaticamente.</strong>
+          </p>
+        </div>
+
+        <button class="btn-imprimir" id="btn-imprimir" type="button">
+          <span class="material-symbols-outlined" style="font-size:1.1rem;">print</span>
+          Imprimir / Salvar comprovante
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+      FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer__grid">
+
+      <div>
+        <div class="footer__logo">
+          <img src="images/logo-escola.jpeg" alt="G.R.E.S. União de Sepetiba" style="height:5rem;width:5rem;object-fit:cover;border-radius:50%;border:2px solid rgba(255,255,255,0.3);margin-bottom:1rem;" />
+        </div>
+        <p class="footer__desc">
+          Sediada em Sepetiba, Rio de Janeiro. Cultivando a tradição,
+          o samba e a união da nossa comunidade desde 2024.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="index.html">Home</a>
+        <a href="nossa-historia.html">Nossa História</a>
+        <a href="diretoria.html">Diretoria</a>
+        <a href="carnaval2027.html">Carnaval 2027</a>
+        <a href="socio.html">Sócios</a>
+        <!-- <a href="#">Galeria</a> -->
+      </div>
+
+      <div class="footer__col">
+        <h4>Institucional</h4>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Imprensa</a>
+        <a href="#" style="color:#fff;font-weight:700;text-decoration:underline;">Sócio-Torcedor</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Social</h4>
+        <!-- <div class="footer__social">
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <span class="material-symbols-outlined" style="font-size:1.1rem;">social_leaderboard</span>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <span class="material-symbols-outlined" style="font-size:1.1rem;">photo_camera</span>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <span class="material-symbols-outlined" style="font-size:1.1rem;">smart_display</span>
+          </a>
+        </div> -->
+        <p class="newsletter-label">Fique por dentro</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Seu email" />
+          <button type="button" aria-label="Enviar">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2024 G.R.E.S. União de Sepetiba — Orgulho de ser Sepetiba 💙🤍</p>
+      <div class="badges">
+        <span>Presidente: João Ribeiro</span>
+        <span>Vice-presidente: Flávio Climagia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/socio.js"></script>
+</body>
+</html>
