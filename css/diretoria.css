@@ -273,6 +273,11 @@
   margin: 0 auto;
 }
 
+hr {
+  margin: 50px;
+  opacity: .6;
+}
+
 /* card circular do coração */
 .dir-coracao-card {
   display: flex;
