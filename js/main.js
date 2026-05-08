@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
       : 'rgba(21, 21, 195, 0.88)';
   });
 
+  /* ── Hero scroll → footer ────────────────────────────── */
+  const heroScroll = document.querySelector('.hero__scroll');
+  const footer = document.querySelector('footer');
+  if (heroScroll && footer) {
+    heroScroll.addEventListener('click', () => {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    });
+    heroScroll.style.cursor = 'pointer';
+  }
+
   /* ── Carousel "Comunidade em Ação" ────────────────────── */
   const track   = document.querySelector('.carousel-track');
   const btnPrev = document.querySelector('.carousel-btn.prev');
