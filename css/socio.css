@@ -585,8 +585,8 @@ input[readonly]:focus {
   margin-bottom: 3rem;
 }
 
-/* caixa do número de sócio */
-.numero-socio-box {
+/* caixa do código de sócio */
+.codigo-socio-box {
   background: var(--blue);
   border-radius: 8px;
   padding: 2.5rem 2rem;
@@ -595,7 +595,7 @@ input[readonly]:focus {
   overflow: hidden;
 }
 
-.numero-socio-box::before {
+.codigo-socio-box::before {
   content: '';
   position: absolute;
   top: -3rem; right: -3rem;
@@ -604,7 +604,7 @@ input[readonly]:focus {
   border-radius: 50%;
 }
 
-.numero-socio-box .label {
+.codigo-socio-box .label {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
@@ -615,7 +615,7 @@ input[readonly]:focus {
   margin-bottom: 0.75rem;
 }
 
-.numero-socio-box .numero {
+.codigo-socio-box .codigo {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 900;
@@ -625,7 +625,7 @@ input[readonly]:focus {
   margin-bottom: 0.5rem;
 }
 
-.numero-socio-box .plano-info {
+.codigo-socio-box .plano-info {
   font-size: 0.78rem;
   color: rgba(255,255,255,0.5);
 }
@@ -678,6 +678,56 @@ input[readonly]:focus {
 }
 
 .btn-imprimir:hover { background: rgba(255,255,255,0.18); }
+
+/* Imprimir */
+
+@media print {
+
+  @page {
+    margin: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .socio-confirmacao,
+  .socio-confirmacao * {
+    visibility: visible;
+  }
+
+  .socio-confirmacao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: block !important;
+
+    background: var(--blue-darker) !important;
+    padding: 5rem 2rem !important;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .socio-confirmacao__inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .btn-imprimir {
+    display: none !important;
+  }
+
+  /* garante impressão das cores */
+  .codigo-socio-box,
+  .confirmacao-aviso {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+}
 
 /* ── Responsivo ───────────────────────────────────────────── */
 @media (max-width: 900px) {

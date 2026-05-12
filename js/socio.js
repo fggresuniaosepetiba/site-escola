@@ -112,7 +112,7 @@
   });
 
   /* ── Gera número de sócio único ───────────────────────────── */
-  function gerarNumeroSocio() {
+  function gerarCodigoSocio() {
     const chars     = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
     const timestamp = Date.now().toString(36).toUpperCase().slice(-3);
     let parte = '';
@@ -187,11 +187,11 @@
       return;
     }
 
-    /* tudo ok — gera número e mostra confirmação */
-    const numero = gerarNumeroSocio();
+    /* tudo ok — gera código e mostra confirmação */
+    const codigo = gerarCodigoSocio();
     const plano  = PLANOS[planoSelecionado];
 
-    document.getElementById('confirmacao-numero').textContent = numero;
+    document.getElementById('confirmacao-codigo').textContent = codigo;
     document.getElementById('confirmacao-plano').textContent  =
       `${plano.nome} — R$ ${plano.valor}/mês`;
     document.getElementById('confirmacao-nome').textContent   =
