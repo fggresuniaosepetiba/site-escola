@@ -95,6 +95,11 @@
         document.getElementById('cidade').value = data.localidade || '';
         document.getElementById('estado').value = data.uf         || '';
         document.getElementById('numero').focus();
+
+        document.getElementById('rua').readOnly = true;
+        document.getElementById('bairro').readOnly = true;
+        document.getElementById('cidade').readOnly = true;
+        document.getElementById('estado').readOnly = true;
       }
     } catch (_) {}
   });

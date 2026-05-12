@@ -492,6 +492,15 @@
 
 .form-group select option { background: #0a0a80; color: #fff; }
 
+input[readonly] {
+  cursor: not-allowed;
+}
+
+input[readonly]:focus {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
 /* botões do formulário */
 .form-actions {
   display: flex;
