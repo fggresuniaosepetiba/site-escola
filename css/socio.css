@@ -479,7 +479,7 @@
   background: rgba(255,255,255,0.1);
 }
 
-.form-group input.error { border-color: #f87171; }
+.form-group input.error, .form-group select.error { border-color: #f87171; }
 
 .form-group select {
   appearance: none;
