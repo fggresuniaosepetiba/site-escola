@@ -92,6 +92,9 @@ body {
 }
 
 .navbar__links {
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 2rem;
   align-items: center;
