@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria | G.R.E.S. Uniao de Sepetiba</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/galeria.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo-escola.jpeg" alt="G.R.E.S. Uniao de Sepetiba" class="navbar__logo-img" />
+    </a>
+
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="nossa-historia.html">Nossa Historia</a></li>
+      <li><a href="diretoria.html">Diretoria</a></li>
+      <li><a href="socio.html">Socios</a></li>
+      <li><a href="galeria.html" class="active">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <main class="glr-main">
+    <section class="glr-hero">
+      <div class="glr-hero__content">
+        <span class="glr-badge">Multimidia</span>
+        <h1>Galeria da Comunidade</h1>
+        <p>Albuns, fotos, videos e momentos marcantes da G.R.E.S. Uniao de Sepetiba.</p>
+      </div>
+    </section>
+
+    <section class="glr-wrapper">
+      <div id="albumsView" class="glr-view">
+        <div class="glr-section-header">
+          <h2>Albuns</h2>
+          <span id="albumsCounter" class="glr-counter">0 albuns</span>
+        </div>
+        <div id="albumsStatus" class="glr-status" aria-live="polite"></div>
+        <div id="albumsGrid" class="glr-albums-grid"></div>
+      </div>
+
+      <div id="albumView" class="glr-view glr-hidden">
+        <div class="glr-album-head">
+          <button id="btnBackAlbums" class="glr-back-btn" type="button">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Voltar para albuns
+          </button>
+          <h2 id="selectedAlbumTitle">Album</h2>
+        </div>
+
+        <div id="tabs" class="glr-tabs" role="tablist" aria-label="Tipos de midia">
+          <button class="glr-tab is-active" role="tab" type="button" data-tab="foto" aria-selected="true">
+            Fotos <span id="count-foto" class="glr-tab-count">0</span>
+          </button>
+          <button class="glr-tab" role="tab" type="button" data-tab="video" aria-selected="false">
+            Videos <span id="count-video" class="glr-tab-count">0</span>
+          </button>
+          <button class="glr-tab" role="tab" type="button" data-tab="youtube" aria-selected="false">
+            Youtube <span id="count-youtube" class="glr-tab-count">0</span>
+          </button>
+        </div>
+
+        <div id="mediasStatus" class="glr-status" aria-live="polite"></div>
+
+        <div id="panel-foto" class="glr-panel is-active" role="tabpanel"></div>
+        <div id="panel-video" class="glr-panel" role="tabpanel"></div>
+        <div id="panel-youtube" class="glr-panel" role="tabpanel"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="photoLightbox" class="glr-lightbox glr-hidden" aria-hidden="true">
+    <button id="lightboxClose" class="glr-lightbox-close" type="button" aria-label="Fechar visualizacao">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div id="lightboxContent" class="glr-lightbox-content" role="dialog" aria-modal="true" aria-label="Visualizacao da foto">
+      <img id="lightboxImage" class="glr-lightbox-image" src="" alt="" />
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/gallery/supabase-env.js"></script>
+  <script type="module" src="js/gallery/pages/galeria-page.js"></script>
+</body>
+</html>

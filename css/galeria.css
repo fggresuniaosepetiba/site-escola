@@ -1,0 +1,330 @@
+.glr-main {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(58, 58, 214, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 35%),
+    var(--blue-darker);
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+.glr-hero {
+  padding: 4.5rem 1.5rem 2rem;
+}
+
+.glr-hero__content {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.glr-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.glr-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.8rem;
+}
+
+.glr-hero p {
+  max-width: 45rem;
+  color: var(--white-60);
+}
+
+.glr-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+}
+
+.glr-view {
+  animation: glr-fade-in 180ms ease-out;
+}
+
+@keyframes glr-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glr-hidden {
+  display: none;
+}
+
+.glr-section-header,
+.glr-album-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.glr-section-header h2,
+.glr-album-head h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.glr-counter {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #a0a0ff;
+}
+
+.glr-status {
+  min-height: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--white-60);
+  font-size: 0.9rem;
+}
+
+.glr-status.is-error {
+  color: #ffd0d0;
+}
+
+.glr-albums-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.glr-album-card {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.glr-album-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.glr-album-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.08rem;
+  margin: 0.8rem 0 0.45rem;
+}
+
+.glr-album-card p {
+  font-size: 0.88rem;
+  color: var(--white-60);
+}
+
+.glr-album-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.glr-album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.glr-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--white);
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+}
+
+.glr-back-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.glr-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.glr-tab {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: transparent;
+  color: var(--white-60);
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.glr-tab.is-active {
+  color: var(--white);
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.glr-tab-count {
+  margin-left: 0.3rem;
+  color: #a0a0ff;
+}
+
+.glr-panel {
+  display: none;
+}
+
+.glr-panel.is-active {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.glr-media-card {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.glr-media-frame {
+  background: #090955;
+  aspect-ratio: 16 / 10;
+}
+
+.glr-media-frame img,
+.glr-media-frame video,
+.glr-media-frame iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  display: block;
+}
+
+.glr-photo-trigger {
+  cursor: pointer;
+}
+
+.glr-media-meta {
+  padding: 0.75rem;
+}
+
+.glr-media-meta h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.glr-media-meta p {
+  font-size: 0.82rem;
+  color: var(--white-60);
+}
+
+.glr-empty {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--white-60);
+  grid-column: 1 / -1;
+}
+
+.glr-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(8, 8, 106, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.glr-lightbox.glr-hidden {
+  display: none;
+}
+
+.glr-lightbox-content {
+  position: relative;
+  max-width: calc(100vw - 3rem);
+  max-height: calc(100vh - 3rem);
+}
+
+.glr-lightbox-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 3rem);
+  max-height: calc(100vh - 3rem);
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.glr-lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.glr-lightbox-close:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .glr-main {
+    padding-top: 4rem;
+  }
+
+  .glr-hero {
+    padding-top: 3.5rem;
+  }
+
+  .glr-section-header,
+  .glr-album-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .glr-panel.is-active {
+    grid-template-columns: 1fr;
+  }
+
+  .glr-albums-grid {
+    grid-template-columns: 1fr;
+  }
+}
