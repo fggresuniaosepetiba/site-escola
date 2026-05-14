@@ -687,7 +687,24 @@ input[readonly]:focus {
     margin: 0;
   }
 
-  body * {
+  /* Colapsa tudo que não é a confirmação para não gerar páginas em branco */
+  body > nav, body > footer {
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    visibility: hidden;
+  }
+
+  main > *:not(.socio-confirmacao) {
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
     visibility: hidden;
   }
 
@@ -697,16 +714,9 @@ input[readonly]:focus {
   }
 
   .socio-confirmacao {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
     display: block !important;
-
     background: var(--blue-darker) !important;
     padding: 5rem 2rem !important;
-
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
