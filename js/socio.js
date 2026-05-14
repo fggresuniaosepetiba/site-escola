@@ -157,6 +157,9 @@
     formSocio.querySelectorAll('input, select').forEach(el => {
       el.classList.remove('error');
     });
+    document.querySelectorAll('.error-msg').forEach(el => {
+      el.classList.remove('visible');
+    });
 
     /* valida campos obrigatórios */
     camposObrigatorios().forEach(id => {
@@ -179,6 +182,26 @@
     if (emailEl.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
       emailEl.classList.add('error');
       valido = false;
+    }
+
+    /* valida idade (mín 21, máx 100) */
+    const nascEl = document.getElementById('nascimento');
+    const erroNasc = document.getElementById('erro-nascimento');
+    if (nascEl.value) {
+      const nasc = new Date(nascEl.value);
+      const hoje = new Date();
+      let idade = hoje.getFullYear() - nasc.getFullYear();
+      const mes = hoje.getMonth() - nasc.getMonth();
+      if (mes < 0 || (mes === 0 && hoje.getDate() < nasc.getDate())) {
+        idade--;
+      }
+      if (idade < 21 || idade > 100) {
+        nascEl.classList.add('error');
+        erroNasc.classList.add('visible');
+        valido = false;
+      }
+    } else {
+      erroNasc.classList.add('visible');
     }
 
     if (!valido) {
