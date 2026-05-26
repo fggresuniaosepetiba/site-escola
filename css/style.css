@@ -497,10 +497,10 @@ body {
 
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  height: 620px;
+  height: 600px;
 }
 
 .bento-main {
@@ -523,13 +523,6 @@ body {
   transition: transform 0.7s;
 }
 
-.bento-main img.bento-main__img-contain {
-  object-fit: contain;
-}
-
-.bento-main:hover img.bento-main__img-contain {
-  transform: none;
-}
 .bento-main:hover img { transform: scale(1.05); }
 
 .bento-main__overlay {
@@ -586,7 +579,7 @@ body {
 }
 
 .bento-news {
-  grid-column: span 4;
+  grid-column: span 2;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 6px;
@@ -628,7 +621,6 @@ body {
 .bento-news:hover .arrow { color: var(--white); }
 
 .bento-card {
-  grid-column: span 2;
   border-radius: 6px;
   padding: 2rem;
   display: flex;
@@ -928,17 +920,8 @@ footer {
 
   .section-about__inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .bento-grid { grid-template-columns: 1fr; height: auto; }
-  .bento-main {
-    grid-column: span 1;
-    grid-row: span 1;
-    width: 100%;
-    max-width: 26rem;
-    aspect-ratio: 2 / 3;
-    height: auto;
-    margin: 0 auto;
-  }
+  .bento-main { grid-column: span 1; grid-row: span 1; height: 360px; }
   .bento-news { grid-column: span 1; }
-  .bento-card { grid-column: span 1; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .footer__col-filiado { grid-column: span 2; }
 }
