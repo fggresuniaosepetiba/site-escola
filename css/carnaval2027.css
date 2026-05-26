@@ -218,6 +218,7 @@
   cursor: pointer;
   padding: 0;
   color: #fff;
+  text-decoration: none;
   transition: gap 0.2s;
 }
 
