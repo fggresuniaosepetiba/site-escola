@@ -1,0 +1,566 @@
+/* ============================================================
+   G.R.E.S. União de Sepetiba — Institutional Pages
+   Reusable across: Privacidade, Termos de Uso, LGPD, Imprensa,
+   Transparência, Estatuto, Regulamentos
+   ============================================================ */
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.inst-hero {
+  background: var(--blue-dark);
+  padding: 10rem 3rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.inst-hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(58,58,214,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.inst-hero__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.inst-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--white-60);
+}
+
+.inst-breadcrumb a {
+  color: var(--white-60);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.inst-breadcrumb a:hover {
+  color: var(--white);
+}
+
+.inst-breadcrumb__sep {
+  color: var(--white-30);
+  font-size: 0.65rem;
+}
+
+.inst-breadcrumb__current {
+  color: #a0a0ff;
+}
+
+.inst-hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 1rem;
+  max-width: 48rem;
+}
+
+.inst-hero__sub {
+  color: var(--white-60);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  max-width: 36rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.inst-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.inst-hero__updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--white-30);
+  padding: 4px 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+}
+
+.inst-hero__updated .material-symbols-outlined {
+  font-size: 0.85rem;
+  color: var(--white-30);
+}
+
+/* ── Page Layout ───────────────────────────────────────────── */
+.inst-page {
+  background: var(--blue-darker);
+  padding: 0 3rem 6rem;
+}
+
+.inst-page__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+.inst-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 7rem;
+  max-height: calc(100vh - 9rem);
+  overflow-y: auto;
+  padding: 2rem 0;
+}
+
+.inst-sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.inst-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.inst-sidebar::-webkit-scrollbar-thumb {
+  background: var(--white-10);
+  border-radius: 2px;
+}
+
+.inst-sidebar__label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--white-30);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.inst-sidebar__nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inst-sidebar__link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.78rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  color: var(--white-60);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  line-height: 1.35;
+  border-radius: 0 4px 4px 0;
+}
+
+.inst-sidebar__link:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.04);
+  border-left-color: var(--white-30);
+}
+
+.inst-sidebar__link.is-active {
+  color: #a0a0ff;
+  border-left-color: #a0a0ff;
+  background: rgba(58,58,214,0.08);
+}
+
+/* ── Content ───────────────────────────────────────────────── */
+.inst-content {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2rem;
+}
+
+.inst-section {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 6rem;
+}
+
+.inst-section:last-child {
+  margin-bottom: 0;
+}
+
+.inst-section__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+
+.inst-section__title::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: #a0a0ff;
+  margin-bottom: 0.75rem;
+}
+
+.inst-section__body {
+  color: var(--white-60);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.inst-section__body p {
+  margin-bottom: 1rem;
+}
+
+.inst-section__body p:last-child {
+  margin-bottom: 0;
+}
+
+.inst-section__body strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.inst-section__body a {
+  color: #a0a0ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.inst-section__body a:hover {
+  color: var(--white);
+}
+
+/* ── Definition list (within sections) ─────────────────────── */
+.inst-defs {
+  list-style: none;
+  margin: 1.25rem 0;
+}
+
+.inst-defs__item {
+  padding: 1rem 1.25rem;
+  border-left: 2px solid rgba(255,255,255,0.1);
+  margin-bottom: 0.75rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 0 6px 6px 0;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.inst-defs__item:hover {
+  border-left-color: rgba(58,58,214,0.4);
+  background: rgba(255,255,255,0.04);
+}
+
+.inst-defs__term {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.inst-defs__desc {
+  font-size: 0.88rem;
+  color: var(--white-60);
+  line-height: 1.6;
+}
+
+/* ── Alert box ─────────────────────────────────────────────── */
+.inst-alert {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border: 1px solid;
+}
+
+.inst-alert--info {
+  background: rgba(58,58,214,0.08);
+  border-color: rgba(58,58,214,0.25);
+}
+
+.inst-alert--warn {
+  background: rgba(251,191,36,0.06);
+  border-color: rgba(251,191,36,0.2);
+}
+
+.inst-alert--tip {
+  background: rgba(110,231,183,0.06);
+  border-color: rgba(110,231,183,0.2);
+}
+
+.inst-alert__icon {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  margin-top: 1px;
+}
+
+.inst-alert--info .inst-alert__icon {
+  color: #a0a0ff;
+}
+
+.inst-alert--warn .inst-alert__icon {
+  color: #fbbf24;
+}
+
+.inst-alert--tip .inst-alert__icon {
+  color: #6ee7b7;
+}
+
+.inst-alert__body {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--white-60);
+}
+
+.inst-alert__body strong {
+  color: var(--white);
+}
+
+/* ── Info card ──────────────────────────────────────────────── */
+.inst-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.inst-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.inst-card__label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #a0a0ff;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.inst-card__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.inst-card__body {
+  font-size: 0.9rem;
+  color: var(--white-60);
+  line-height: 1.6;
+}
+
+.inst-card__body code {
+  font-family: 'Manrope', monospace;
+  font-size: 0.88rem;
+  padding: 1px 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  color: var(--white-30);
+}
+
+/* ── List styling ──────────────────────────────────────────── */
+.inst-section__body ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.inst-section__body ul li {
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.inst-section__body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(58,58,214,0.5);
+}
+
+.inst-section__body ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.inst-section__body ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: var(--white-60);
+}
+
+/* ── Back to top ────────────────────────────────────────────── */
+.inst-back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--white-60);
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.inst-back-top:hover {
+  color: #a0a0ff;
+  gap: 0.75rem;
+}
+
+.inst-back-top .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+/* ── Mobile sidebar override (horizontal strip) ─────────────── */
+@media (max-width: 900px) {
+  .inst-page {
+    padding: 0 1.5rem 4rem;
+  }
+
+  .inst-page__inner {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .inst-hero {
+    padding: 8rem 1.5rem 3rem;
+  }
+
+  .inst-sidebar {
+    position: static;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    padding: 1.5rem 0 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 1.5rem;
+  }
+
+  .inst-sidebar__label {
+    display: none;
+  }
+
+  .inst-sidebar__nav {
+    flex-direction: row;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .inst-sidebar__nav::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  .inst-sidebar__nav::-webkit-scrollbar-thumb {
+    background: var(--white-10);
+    border-radius: 2px;
+  }
+
+  .inst-sidebar__link {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    white-space: nowrap;
+  }
+
+  .inst-sidebar__link:hover {
+    border-left-color: transparent;
+    border-bottom-color: var(--white-30);
+  }
+
+  .inst-sidebar__link.is-active {
+    border-left-color: transparent;
+    border-bottom-color: #a0a0ff;
+    background: transparent;
+  }
+
+  .inst-content {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .inst-hero {
+    padding: 7rem 1.25rem 2.5rem;
+  }
+
+  .inst-hero__title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .inst-page {
+    padding: 0 1.25rem 3rem;
+  }
+
+  .inst-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .inst-section__body {
+    font-size: 0.9rem;
+  }
+
+  .inst-alert {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .inst-card {
+    padding: 1.25rem;
+  }
+
+  .inst-defs__item {
+    padding: 0.85rem 1rem;
+  }
+}
