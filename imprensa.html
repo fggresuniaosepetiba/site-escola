@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imprensa | G.R.E.S. União de Sepetiba</title>
+  <meta name="description" content="A Central de Imprensa da G.R.E.S. União de Sepetiba está sendo preparada. Enquanto isso, acompanhe nossos canais oficiais e fique por dentro de tudo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/institutional.css" />
+  <link rel="canonical" href="https://uniaodesepetiba.com.br/imprensa" />
+
+  <style>
+    /* ── SVG animations ─────────────────────────────────── */
+    @keyframes mug-toast {
+      0%, 100% { transform: rotate(-1.5deg); }
+      50% { transform: rotate(2.2deg); }
+    }
+    @keyframes badge-sway {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+    @keyframes bubble-rise {
+      0%   { transform: translateY(0);    opacity: 0; }
+      15%  { opacity: 0.6; }
+      100% { transform: translateY(-110px); opacity: 0; }
+    }
+    @keyframes sparkle-pulse {
+      0%, 100% { opacity: 0.05; transform: scale(0.6); }
+      50%      { opacity: 0.3;  transform: scale(1.1); }
+    }
+    @keyframes mic-float {
+      0%, 100% { transform: rotate(6deg) translateY(0); }
+      50%      { transform: rotate(6deg) translateY(-3px); }
+    }
+    .svg-mug-group {
+      animation: mug-toast 4s ease-in-out infinite;
+      transform-origin: 160px 255px;
+    }
+    .svg-badge-group {
+      animation: badge-sway 3.2s ease-in-out infinite;
+      transform-origin: 160px 82px;
+    }
+    .svg-bubble {
+      animation: bubble-rise 3.5s ease-out infinite;
+    }
+    .svg-bubble:nth-child(2) { animation-delay: 0.8s; animation-duration: 4s; }
+    .svg-bubble:nth-child(3) { animation-delay: 1.6s; animation-duration: 3s; }
+    .svg-bubble:nth-child(4) { animation-delay: 2.2s; animation-duration: 3.8s; }
+    .svg-bubble:nth-child(5) { animation-delay: 0.3s; animation-duration: 4.2s; }
+    .svg-sparkle {
+      animation: sparkle-pulse 2.8s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .svg-sparkle:nth-child(2) { animation-delay: 1.2s; }
+    .svg-sparkle:nth-child(3) { animation-delay: 0.5s; }
+    .svg-sparkle:nth-child(4) { animation-delay: 2s; }
+    .svg-mic-group {
+      animation: mic-float 3.6s ease-in-out infinite;
+      transform-origin: 272px 265px;
+    }
+
+    /* ── Central content ────────────────────────────────── */
+    .inst-central {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: 1rem 0 1rem;
+    }
+
+    .inst-central__media {
+      margin: 0 0 2.5rem;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .inst-central__media svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .inst-central__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .inst-central__title .emoji {
+      display: inline-block;
+      font-size: 1.4em;
+      vertical-align: middle;
+      margin-right: 0.15em;
+    }
+
+    .inst-central__body {
+      color: var(--white-60);
+      font-size: 0.95rem;
+      line-height: 1.85;
+      margin-bottom: 0.5rem;
+    }
+
+    .inst-central__body p {
+      margin-bottom: 1.25rem;
+    }
+
+    .inst-central__body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inst-central__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2.75rem;
+    }
+
+    .inst-central__actions .btn-primary,
+    .inst-central__actions .btn-outline {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      padding: 0.85rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .inst-central { padding: 0.5rem 0 0; }
+      .inst-central__media { max-width: 260px; margin-bottom: 2rem; }
+      .inst-central__actions { flex-direction: column; width: 100%; }
+      .inst-central__actions .btn-primary,
+      .inst-central__actions .btn-outline {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo-escola.jpeg" alt="G.R.E.S. União de Sepetiba" class="navbar__logo-img" />
+    </a>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="nossa-historia.html">Nossa História</a></li>
+      <li><a href="diretoria.html">Diretoria</a></li>
+      <li><a href="carnaval2027.html">Carnaval 2027</a></li>
+      <li><a href="socio.html">Sócios</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="inst-hero" aria-labelledby="inst-hero-title">
+      <div class="inst-hero__inner">
+        <nav class="inst-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="inst-breadcrumb__sep" aria-hidden="true">/</span>
+          <span class="inst-breadcrumb__current">Imprensa</span>
+        </nav>
+
+        <h1 class="inst-hero__title" id="inst-hero-title">Imprensa</h1>
+
+        <p class="inst-hero__sub">
+          Nossa Central de Imprensa está sendo preparada para reunir comunicados oficiais, releases, materiais institucionais, fotografias, identidade visual e conteúdos destinados aos profissionais da comunicação.
+        </p>
+
+        <div class="inst-hero__meta">
+          <span class="inst-hero__updated">
+            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            Última atualização: 29 de junho de 2026
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="inst-page">
+      <div class="inst-page__inner" style="justify-content: center;">
+        <div class="inst-content" style="max-width: none; padding-top: 0;">
+
+          <div class="inst-central">
+
+            <figure class="inst-central__media" aria-label="Ilustração animada de uma caneca de chopp com crachá de imprensa, bloco de notas, caneta e microfone, representando uma pausa da equipe de jornalismo">
+              <svg viewBox="0 0 320 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+
+                <!-- ── Background sparkles ── -->
+                <path class="svg-sparkle" d="M45,55 Q48,58 51,55 Q48,52 45,55Z" fill="#a0a0ff" opacity="0.15" />
+                <path class="svg-sparkle" d="M278,60 Q282,64 286,60 Q282,56 278,60Z" fill="#a0a0ff" opacity="0.1" />
+                <path class="svg-sparkle" d="M35,290 Q39,294 43,290 Q39,286 35,290Z" fill="#a0a0ff" opacity="0.08" />
+                <path class="svg-sparkle" d="M290,300 Q294,304 298,300 Q294,296 290,300Z" fill="#a0a0ff" opacity="0.12" />
+
+                <!-- ── Microphone (right, behind) ── -->
+                <g class="svg-mic-group">
+                  <line x1="272" y1="265" x2="272" y2="190" stroke="rgba(255,255,255,0.08)" stroke-width="2" stroke-linecap="round" />
+                  <rect x="263" y="170" width="18" height="22" rx="3" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+                  <rect x="266" y="158" width="12" height="14" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+                  <line x1="269" y1="162" x2="275" y2="162" stroke="rgba(255,255,255,0.07)" stroke-width="0.6" />
+                  <line x1="269" y1="165" x2="275" y2="165" stroke="rgba(255,255,255,0.07)" stroke-width="0.6" />
+                  <line x1="269" y1="168" x2="275" y2="168" stroke="rgba(255,255,255,0.07)" stroke-width="0.6" />
+                </g>
+
+                <!-- ── Notepad (left, behind) ── -->
+                <g transform="rotate(-4, 60, 210)">
+                  <rect x="28" y="175" width="65" height="85" rx="3" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                  <line x1="35" y1="192" x2="86" y2="192" stroke="rgba(255,255,255,0.07)" stroke-width="0.8" />
+                  <line x1="35" y1="203" x2="86" y2="203" stroke="rgba(255,255,255,0.07)" stroke-width="0.8" />
+                  <line x1="35" y1="214" x2="86" y2="214" stroke="rgba(255,255,255,0.07)" stroke-width="0.8" />
+                  <line x1="35" y1="225" x2="72" y2="225" stroke="rgba(255,255,255,0.05)" stroke-width="0.8" />
+                  <path d="M35,237 Q48,240 58,236 Q68,232 78,238" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" fill="none" />
+                  <!-- Pen -->
+                  <line x1="95" y1="195" x2="105" y2="185" stroke="rgba(255,255,255,0.15)" stroke-width="2.5" stroke-linecap="round" />
+                  <line x1="104" y1="186" x2="106" y2="184" stroke="#a0a0ff" stroke-width="2.5" stroke-linecap="round" />
+                </g>
+
+                <!-- ── Beer mug (center, front) ── -->
+                <g class="svg-mug-group">
+                  <!-- Glass body -->
+                  <rect x="115" y="82" width="90" height="178" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" />
+                  <!-- Beer liquid -->
+                  <rect x="119" y="118" width="82" height="138" rx="5" fill="#F5A623" opacity="0.25" />
+                  <!-- Foam -->
+                  <path d="M119,115 Q128,108 137,115 Q146,109 155,115 Q164,108 173,115 Q182,109 191,115 Q196,120 201,115 Q205,110 201,118 L119,118Z" fill="rgba(255,255,255,0.12)" />
+                  <!-- Glass shine -->
+                  <rect x="122" y="90" width="5" height="162" rx="2.5" fill="rgba(255,255,255,0.06)" />
+                  <rect x="194" y="96" width="3" height="80" rx="1.5" fill="rgba(255,255,255,0.03)" />
+                  <!-- Label on glass -->
+                  <rect x="148" y="158" width="24" height="14" rx="2" fill="rgba(160,160,255,0.06)" stroke="rgba(160,160,255,0.15)" stroke-width="0.8" />
+                  <text x="160" y="167" text-anchor="middle" fill="#a0a0ff" font-family="'Space Grotesk', sans-serif" font-size="5.5" font-weight="700" letter-spacing="0.8">IMPRENSA</text>
+
+                  <!-- Bubbles -->
+                  <circle class="svg-bubble" cx="135" cy="245" r="2" fill="rgba(255,255,255,0.3)" />
+                  <circle class="svg-bubble" cx="150" cy="248" r="1.5" fill="rgba(255,255,255,0.2)" />
+                  <circle class="svg-bubble" cx="175" cy="242" r="2.5" fill="rgba(255,255,255,0.15)" />
+                  <circle class="svg-bubble" cx="162" cy="250" r="1" fill="rgba(255,255,255,0.25)" />
+                  <circle class="svg-bubble" cx="128" cy="252" r="1.8" fill="rgba(255,255,255,0.15)" />
+                </g>
+
+                <!-- ── Badge hanging (front) ── -->
+                <g class="svg-badge-group">
+                  <line x1="160" y1="82" x2="160" y2="108" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" />
+                  <rect x="145" y="108" width="30" height="24" rx="3" fill="var(--blue-darker, #0d0d1a)" stroke="rgba(160,160,255,0.35)" stroke-width="0.8" />
+                  <text x="160" y="118" text-anchor="middle" fill="#a0a0ff" font-family="'Space Grotesk', sans-serif" font-size="5" font-weight="700" letter-spacing="0.6">IMPRENSA</text>
+                  <text x="160" y="125" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="'Manrope', sans-serif" font-size="3.2">União de Sepetiba</text>
+                </g>
+
+              </svg>
+              <figcaption class="inst-central__caption">
+                Ilustração original — G.R.E.S. União de Sepetiba
+              </figcaption>
+            </figure>
+
+            <h2 class="inst-central__title">
+              <span class="emoji" role="img" aria-label="cerveja">🍺</span>
+              Nossa equipe de imprensa saiu para "uma rapidinha". Já já voltamos com os releases!
+            </h2>
+
+            <div class="inst-central__body">
+              <p>
+                Enquanto a equipe faz uma pausa bem merecida (até jornalista de samba precisa respirar entre um release e outro), a Central de Imprensa da G.R.E.S. União de Sepetiba está sendo organizada com toda a dedicação. Em breve, este espaço estará repleto de comunicados oficiais, releases, fotografias, identidade visual e materiais exclusivos para os profissionais da comunicação.
+              </p>
+              <p>
+                Fique de olho no Instagram oficial para acompanhar os bastidores, os ensaios e as novidades enquanto a Central de Imprensa não abre oficialmente as portas.
+              </p>
+            </div>
+
+            <div class="inst-central__actions">
+              <a href="index.html" class="btn-primary">Voltar para a Home</a>
+              <a href="https://www.instagram.com/gresuniaodesepetiba/" target="_blank" rel="noopener noreferrer" class="btn-outline">Instagram Oficial</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer__grid">
+
+      <div>
+        <div class="footer__logo">
+          <img src="images/logo-escola.jpeg" alt="G.R.E.S. União de Sepetiba" style="height:5rem;width:5rem;object-fit:cover;border-radius:50%;border:2px solid rgba(255,255,255,0.3);margin-bottom:1rem;" />
+        </div>
+        <p class="footer__desc">
+          Sediada em Sepetiba, Rio de Janeiro. Cultivando a tradição,
+          o samba e a união da nossa comunidade desde 2024.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="index.html">Home</a>
+        <a href="nossa-historia.html">Nossa História</a>
+        <a href="diretoria.html">Diretoria</a>
+        <a href="carnaval2027.html">Carnaval 2027</a>
+        <a href="socio.html">Sócios</a>
+      </div>
+
+      <div class="footer__col-filiado">
+        <span class="filiado-label">Filiado à</span>
+        <img src="images/libeerj_logo.jpeg" alt="LIGA-BERJ" class="filiado-logo" />
+      </div>
+
+      <div class="footer__col">
+        <h4>Institucional</h4>
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="imprensa.html">Imprensa</a>
+        <a href="socio.html" style="color:#fff;font-weight:700;text-decoration:underline;">Sócio-Torcedor</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Social</h4>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/gresuniaodesepetiba/" target="_blank" class="social-btn instagram" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@Uni%C3%A3odeSepetibaTV" target="_blank" class="social-btn youtube" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@g.r.e.s.unio.de.s?_r=1&_t=ZS-96HOAADJyFA" target="_blank" class="social-btn tiktok" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+        <p class="newsletter-label">Fique por dentro</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Seu email" />
+          <button type="button" aria-label="Enviar">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2024 G.R.E.S. União de Sepetiba — Orgulho de ser Sepetiba &#x1F499;&#x1F91D;</p>
+      <p class="credit">Desenvolvido por Trinary Solutions</p>
+      <div class="badges">
+        <span>Presidente: João Ribeiro</span>
+        <span>Vice-presidente: Flávio Climagia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/institutional.js"></script>
+</body>
+</html>
